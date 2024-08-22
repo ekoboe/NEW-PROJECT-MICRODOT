@@ -1,0 +1,181 @@
+*{
+font-family: 'Helvetica', 'sans-serif';
+padding: 0;
+margin: 0;
+}
+
+/* MENGATUR TATA LETAK LOGO TUTWURI */
+.logo_tut{
+  float: left;
+  margin-top: 5px;
+  margin-left: 2%;
+  margin-right: 5%;
+}
+
+/* MENGATUR TATA LETAK LOGO BBPPMPV BOE */
+.logo_vedc{
+  float: right;
+  margin-top: 15px;
+  margin-right: 2%;
+}
+
+/* MENGATUR TULISAN DEPARTEMEN TEKNOLOGI INFORMASI PADA BAR ATAS WEB */
+.pos_font{
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(95, 157, 159, 0.66);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+/* MENGATUR TULISAN DASHBOARD SISTEM MONITORING DAN CONTROLLING */
+.navigation{
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  margin: 10px;
+}
+
+/* MENGATUR TULISAN COPYRIGHT PADA BAGIAN BAWAH WEB */
+.copy{
+text-align: center;
+font-family: Gadugi;
+margin-top: 2%;
+}
+
+/* MENGATUR FONT STATUS*/
+.gauge-card-1 h4{
+  font-size: 25px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  padding: 5px;
+  text-align: center;
+  color: #e1b48d;
+  font-family: "Agency FB";
+}
+
+/* MENGATUR FONT TEXT WARNING DAN SAFE KETIKA BUTTON ALARM DI TEKAN */
+.gauge-card-1 h5{
+  font-size: 20px;
+  margin-top: 8px;
+  color: rgb(255, 234, 0);
+}
+
+
+/* GAUGE CARD */
+.gauge-container{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(1, 1fr);
+padding: 5%;
+column-gap: 5%;
+justify-items: center;
+row-gap: 10px;
+min-height: 20%;
+margin-top: 1px;
+margin-bottom: 11%;
+color: #ffffff;
+text-align: center;
+  height: 50%;
+}
+
+/* MENGATUR TATA LETAK CARD STATUS */
+.gauge-card-1{
+background-color: rgba(7, 33, 82, 0.96);
+grid-column: 2;
+grid-row: 1 / span 1;
+margin-right: 25%;
+padding: 20px;
+width: 80%;
+height: 165%;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+/* MENGATUR TATA LETAK CONTROL CARD BUTTON ALARM */
+.main-card-1{
+background-color: #344966;
+grid-column: 1;
+grid-row: 1 / span 1;
+padding: 20px;
+height: 165%;
+width: 80px;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* BUTTON CONTROL ON OFF */
+.button-container{
+display: flex;
+background: #b6e5e6;
+border-radius: 15px;
+margin-left: 10%;
+margin-right: 10%;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+z-index: 1;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 5px;
+  width: 90%;
+  cursor: pointer;
+  z-index: 1;
+}
+.button1 {background-color: #4CAF50;} /* Hijau */
+.button2 {background-color: #f44336;} /* Merah */
+
+
+/* MENGATUR RESPONSIVE JIKA WEB DILIHAT MENGGUNAKAN DEVICE LAIN */
+@media screen and (max-width: 800px) {
+   .gauge-container {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    position: revert;
+    display: flex;
+    width: 80%;
+    margin: auto;
+  }
+
+  .navigation, .pos_font h1 {
+    text-align: center;
+  }
+
+  .logo_tut{
+    position: relative;
+    width:  0%;
+    margin: 5px;
+    padding-right: 30px;
+  }
+
+  .logo_vedc{
+    width:  7%;
+    margin-right: 21%;
+    position: relative;
+  }
+}
+
+.gauge-card-1 {
+    margin: auto;
+  }
+
+.main-card-1{
+  width: 80%;
+  height: 164%;
+  margin: auto;
+}
+
+.main-card-1 .button-container{
+  margin: 0 auto;
+  width: 32%;
+  height: 70%;
+}
