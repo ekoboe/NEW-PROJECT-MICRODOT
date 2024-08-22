@@ -1,0 +1,206 @@
+*{
+  font-family: 'Helvetica', 'sans-serif';
+  padding: 0;
+  margin: 0;
+}
+
+/* MENGATUR TATA LETAK LOGO TUTWURI */
+.logo_tut{
+  float: left;
+  margin-top: 5px;
+  margin-left: 40px;
+}
+
+/* MENGATUR TATA LETAK LOGO BBPPMPV BOE */
+.logo_vedc{
+  float: right;
+  margin-top: 15px;
+  margin-right: 40px;
+}
+
+/* MENGATUR TULISAN DEPARTEMEN TEKNOLOGI INFORMASI PADA BAR ATAS WEB */
+.pos_font{
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(95, 157, 159, 0.66);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+/* MENGATUR TULISAN DASHBOARD SISTEM MONITORING DAN CONTROLLING */
+.navigation{
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  margin: 10px;
+}
+
+/* MENGATUR TULISAN COPYRIGHT PADA BAGIAN BAWAH WEB */
+.copy{
+  text-align: center;
+  font-family: Gadugi;
+  margin-top: 21%;
+}
+
+
+/* GAUGE CARD */
+.gauge-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(1, 1fr);
+  column-gap: -5px;
+  row-gap: 10px;
+  min-height: 20%;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 35px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* MENGATUR TATA LETAK CARD TEMPERATURE */
+.gauge-card-1{
+  background-color: #344966;
+  grid-column: 1;
+  grid-row: 1 / span 1;
+  padding: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  height: 220%;
+  width: 90%;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+/* MENGATUR TATA LETAK CARD CHART TEMPERATURE */
+.gauge-card-2{
+  background-color: #344966;
+  grid-column: 2 / span 1;
+  padding: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 90%;
+  height: 220%;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+/* MENGATUR TATA LETAK CHART PADA CARD TEMPERATURE, HUMIDITY */
+.gauge-card-2 canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* CHART GAUGE */
+.gauge {
+  width: 100%;
+  position: relative;
+  top: -290px;
+  left: -50px;
+  max-width: 250px;
+  font-size: 35px;
+  color: #004033;
+}
+
+/* MENGATUR TATA LETAK DAN TAMPILAN BODY CHART GAUGE */
+.gauge__body {
+  width: 100%;
+  height: 50%;
+  padding-bottom: 50%;
+  background: #83afc8;
+  position: relative;
+  top: 400px;
+  left: 85%;
+  border-top-left-radius: 100% 200%;
+  border-top-right-radius: 100% 200%;
+  overflow: hidden;
+}
+
+/* MENGATUR TAMPILAN FILL CHART GAUGE */
+.gauge__fill {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: inherit;
+  height: 100%;
+  background: #cee7e8;
+  transform-origin: center top;
+  transform: rotate(0.25turn);
+  transition: transform 0.2s ease-out;
+}
+
+/* MENGATUR TAMPILAN COVER PADA CHART GAUGE */
+.gauge__cover {
+  width: 70%;
+  height: 150%;
+  background: #344966;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* MENGATUR TEXT PADA CHART GAUGE */
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25%;
+  box-sizing: border-box;
+  color: #e3dfdf;
+}
+
+
+/* MENGATUR RESPONSIVE JIKA WEB DILIHAT MENGGUNAKAN DEVICE LAIN */
+@media screen and (max-width: 800px) {
+   .gauge-container {
+     text-align: center;
+     flex-direction: column;
+     align-items: center;
+     position: relative;
+     display: flex;
+     width: 90%;
+     margin: auto;
+  }
+  .gauge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .gauge__body{
+    margin: auto;
+    top: 300px;
+    left: 20%;
+  }
+
+  .navigation, .pos_font h1 {
+    text-align: center;
+  }
+
+  .gauge-card-2 {
+    position: relative;
+    margin: auto;
+    height: 400px;
+    width: 90%;
+  }
+
+  .logo_tut{
+    position: relative;
+    width: 13%;
+    height: 6%;
+  }
+  .logo_vedc{
+    width: 15%;
+    height: 10%;
+    position: relative;
+  }
+  .copy{
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+}
